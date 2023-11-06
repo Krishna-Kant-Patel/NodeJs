@@ -10,4 +10,4 @@ app.get("/about", (req, res)=>{
     res.send("hello i am about page")
 })
 
-app.listen(8000, ()=>console.log("hello world"))
+app.listen(8000, ()=>console.log("server started at 8000"))
