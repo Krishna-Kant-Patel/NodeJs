@@ -8,7 +8,7 @@ app.set('view engine', "hbs");
 
 // app.use(express.static(staticPath));
 app.get("/", (req, res)=>{
-    res.render('index')
+    res.render('index',{greeting:"how are you?"})
 })
 
 app.get("/", (req, res)=>{
