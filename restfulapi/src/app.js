@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 require('./db/conn');
 const LoginData = require('./models/login')
 const port  = process.env.PORT || 8000;
@@ -16,6 +17,7 @@ app.get("/", async (req, res) => {
 })
 
 app.use(express.json());
+app.use(cors());
 
 app.post("/login", (req, res)=>{
     console.log(req.body);
