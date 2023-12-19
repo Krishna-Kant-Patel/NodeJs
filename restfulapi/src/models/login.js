@@ -6,6 +6,7 @@ const loginSchema = new mongoose.Schema({
     name:{
         type:String,
         required:true,
+        unique:[true, "email already exist"],
         minlength:3
     },
     email:{
@@ -23,7 +24,9 @@ const loginSchema = new mongoose.Schema({
     password:{
         type:String,
         required:true
-    }
+    },
+    resetPasswordToken: String,
+    resetPasswordExpires: Date,
 })
 
 
